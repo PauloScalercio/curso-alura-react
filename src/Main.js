@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Table from './Tabela';
 import Form from './Formulario';
+import { withRouter } from 'react-router-dom';
 
 class Main extends Component {
 
@@ -11,10 +12,10 @@ class Main extends Component {
     }
 
     render() { 
-        console.log(this.props.rota);
-       if(this.props.rota === "/"){ 
+       if(this.props.location.pathname === "/"){ 
+        
         return (
-
+            
             <main>
                 <div className="App container">
                     <h1>{this.props.titulo}</h1>
@@ -24,7 +25,7 @@ class Main extends Component {
             </main>
         );
     }
-    if(this.props.rota === "/sobre"){
+    if(this.props.location.pathname === "/sobre"){
         return (
             <div className="App container">
                     <h1>{this.props.titulo}</h1>
@@ -37,4 +38,4 @@ class Main extends Component {
     }
 
 }
-export default Main;
+export default withRouter(Main);

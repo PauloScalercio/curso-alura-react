@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+//STATELESS COMPONENT / SIMPLE COMPONENT
 
 const TableHead = () => {
     return (
@@ -16,7 +16,7 @@ const TableHead = () => {
 }
 
 const TableBody = props => {
-
+    console.log(props.autores)
     const linhas = props.autores.map((linha, index) => {
         return (
             <tr key={index}>
@@ -34,7 +34,7 @@ const TableBody = props => {
 class Tabela extends Component {
 
     render() {
-        const { autores , removeAutor} = this.props;
+        const { autores , removeAutor } = this.props;
         
         return (
             <table className="centered highlight">

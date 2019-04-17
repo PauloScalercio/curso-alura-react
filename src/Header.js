@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
+
+
+const LinkWrapper = (props) => {
+    return (
+        <NavLink activeStyle={{ fontWeight: "bold" }} {...props}/>
+    );
+}
 
 class Header extends Component {
     constructor(props){
@@ -12,11 +20,11 @@ class Header extends Component {
             
             <nav>
                 <div className="nav-wrapper indigo lighten-2">
-                    <Link to="/" className="brand-logo ml-3">Casa do Código</Link>
+                    <NavLink to="/" className="brand-logo ml-3">Casa do Código</NavLink>
                     <ul id="nav-mobile" className="right hide-on-med-and-down">
-                        <li><Link to="/autor">Autores</Link></li>
-                        <li><Link to="/livros">Livros</Link></li>
-                        <li><Link to="/sobre">Sobre</Link></li>
+                        <li><LinkWrapper to="/autor">Autores</LinkWrapper></li>
+                        <li><LinkWrapper to="/livros">Livros</LinkWrapper></li>
+                        <li><LinkWrapper to="/sobre">Sobre</LinkWrapper></li>
                     </ul>
                 </div>
             </nav>

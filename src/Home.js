@@ -1,13 +1,13 @@
 import React, { Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css'
-import './App.css';
+import './Home.css';
 import M from 'materialize-css';
 
 import Table from './Tabela';
 import Form from './Formulario';
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
+
 
 class App extends Component {
 
@@ -70,7 +70,11 @@ class App extends Component {
     return (
       <Fragment>
         <Header />
-        <Main rota={this.props.location.pathname} titulo={this.state.titulo} autores={this.state.autores} removeAutor={this.removeAutor} exibeMensagem={this.exibeMensagem} escutadorDeSubmit={this.escutadorDeSubmit} />
+        <div className="App container mb-10">
+          <h1>Casa do Código</h1>
+          <Table autores={this.state.autores} removeAutor={this.removeAutor} />
+          <Form exibeMensagem={this.exibeMensagem} escutadorDeSubmit={this.escutadorDeSubmit} />
+        </div>
         <Footer />
       </Fragment>
     );
@@ -78,6 +82,13 @@ class App extends Component {
 
 }
 
+// tornar app em home.js, e entre header e footer colocar o conteúdo de cada página  (especifico do home, nesse caso)
+// separar em pasta componentes q representam uma pagina
+//ideia: fazer com if primeiro por ser intuitivo...
+//high order component
+//container component /table -recupera os dados
+//presentational component  -mostra os dados
+// did mount x will mount. ver ql o melhor!
 
 
 export default App;

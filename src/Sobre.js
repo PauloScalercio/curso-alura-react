@@ -17,7 +17,7 @@ class Sobre extends Component{
         return(
             <Fragment>
                 <Header />
-                <Main rota={this.props.location.pathname} titulo={this.state.titulo}/>
+                <Main titulo={this.state.titulo}/>
                 <Footer />
             </Fragment>
         );

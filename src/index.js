@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Home from './Home';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Sobre from './Sobre';
 
+
+
 ReactDOM.render(
 <BrowserRouter> 
     <Switch>
-        <Route path="/" exact={true} component={App} />
+        <Route path="/" exact={true} component={Home} />
         <Route path="/sobre" component={Sobre} />
     </Switch>
 </BrowserRouter>, document.getElementById('root'));

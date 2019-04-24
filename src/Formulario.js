@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 
 import MaterialIcon from 'material-icons-react';
 import FormValidador from './FormValidador';
-
+import PopUp from './PopUp';
 
 
 class Formulario extends Component {
 
     constructor(props) {
         super(props);
-
 
         this.validator = new FormValidador([
             {
@@ -60,7 +59,7 @@ class Formulario extends Component {
             })
 
             camposInvalidos.forEach(campo => {
-                this.props.exibeMensagem(campo.message, "error");
+                PopUp.exibeMensagem(campo.message, "error");
             });
         }
 

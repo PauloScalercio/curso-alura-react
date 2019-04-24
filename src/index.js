@@ -5,6 +5,7 @@ import Home from './Home';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Sobre from './Sobre';
+import NotFound from './NotFound'
 
 
 
@@ -13,6 +14,7 @@ ReactDOM.render(
     <Switch>
         <Route path="/" exact={true} component={Home} />
         <Route path="/sobre" component={Sobre} />
+        <Route component={NotFound} />
     </Switch>
 </BrowserRouter>, document.getElementById('root'));
 

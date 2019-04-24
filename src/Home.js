@@ -1,13 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import 'materialize-css/dist/css/materialize.min.css'
-import './Home.css';
+import './home.css';
 import M from 'materialize-css';
 
 import Table from './Tabela';
 import Form from './Formulario';
 import Header from './Header';
 import Footer from './Footer';
-
 
 class App extends Component {
 
@@ -66,15 +65,20 @@ class App extends Component {
 
   };
 
+ 
+
   render() {
+    
     return (
       <Fragment>
         <Header />
-        <div className="App container mb-10">
-          <h1>Casa do Código</h1>
-          <Table autores={this.state.autores} removeAutor={this.removeAutor} />
-          <Form exibeMensagem={this.exibeMensagem} escutadorDeSubmit={this.escutadorDeSubmit} />
-        </div>
+        <main>
+          <div className="App container mb-10">
+            <h1>Casa do Código</h1>
+            <Table autores={this.state.autores} removeAutor={this.removeAutor} />
+            <Form exibeMensagem={this.exibeMensagem} escutadorDeSubmit={this.escutadorDeSubmit} />
+          </div>
+        </main>
         <Footer />
       </Fragment>
     );

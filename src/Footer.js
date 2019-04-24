@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import LinkWrapper from './LinkWrapper';
 
 class Footer extends Component {
 
     render() {
         return (
-            <footer className="page-footer indigo lighten-2">
+            <footer className="page-footer indigo lighten-2 mb-0">
                 <div className="container">
                     <div className="row">
                         <div className="col l6 s12">
@@ -15,7 +15,7 @@ class Footer extends Component {
                         <div className="col l4 offset-l2 s12">
                             <h5 className="white-text">Links</h5>
                             <ul>
-                                <li><Link className="grey-text text-lighten-3" to="/sobre">Sobre</Link></li>
+                                <li><LinkWrapper className="grey-text text-lighten-3" to="/sobre">Sobre</LinkWrapper></li>
                             </ul>
                         </div>
                     </div>
@@ -23,7 +23,7 @@ class Footer extends Component {
                 <div className="footer-copyright">
                     <div className="container">
                         © 2019 Copyright Text
-                        <Link to='/paulo' className="grey-text text-lighten-4 right">Desenvolvido por Paulo Scalercio</Link>
+                        <LinkWrapper to='/paulo' className="grey-text text-lighten-4 right">Desenvolvido por Paulo Scalercio</LinkWrapper>
                     </div>
                     
                 </div>

@@ -3,7 +3,6 @@ import 'materialize-css/dist/css/materialize.min.css';
 
 import Header from './Header';
 import Footer from './Footer';
-import Main from './Main';
 
 class Sobre extends Component{
 
@@ -17,7 +16,7 @@ class Sobre extends Component{
         return(
             <Fragment>
                 <Header />
-                <Main titulo={this.state.titulo}/>
+                <h1>Sobre</h1>
                 <Footer />
             </Fragment>
         );

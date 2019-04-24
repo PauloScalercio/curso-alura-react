@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 //STATELESS COMPONENT / SIMPLE COMPONENT
 
 const TableHead = () => {
@@ -32,6 +31,13 @@ const TableBody = props => {
 }
 
 class Tabela extends Component {
+
+    componentDidMount(){
+       fetch('https://api-pacientes.herokuapp.com/pacientes')
+        .then(res => res.json())
+        .then(res => console.log(res))
+       
+      }
 
     render() {
         const { autores , removeAutor } = this.props;

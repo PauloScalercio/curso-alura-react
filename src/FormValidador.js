@@ -21,7 +21,7 @@ class FormValidador {
                     validator[rule.method] :
                     rule.method
                 if (validation_method(field_value, ...args, state) !== rule.validWhen) {
-                    console.log("entrou")
+                    
                     validacao[rule.field] = {
                         isInvalid: true,
                         message: rule.message
@@ -29,8 +29,6 @@ class FormValidador {
                     validacao.isValid = false;
                 }
             }
-
-
         });
         return validacao;
 
@@ -42,7 +40,6 @@ class FormValidador {
         this.validacoes.forEach(rule => {
 
             validacao[rule.field] = { isInvalid: false, message: '' }
-
 
         });
 

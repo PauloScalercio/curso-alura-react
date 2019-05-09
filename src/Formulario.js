@@ -39,21 +39,18 @@ class Formulario extends Component {
             validacao: this.validator.valido()
         }
         this.state = this.initialState;
-
     }
 
     submitFormulario = () => {
         const validacao = this.validator.valida(this.state);
-        console.log(validacao)
+        
+
         if (validacao.isValid) {
             this.props.escutadorDeSubmit(this.state);
             this.setState(this.initialState);
         } else {
             const { nome, livro, preco } = validacao;
             const campos = [nome, livro, preco];
-            campos.forEach(campo => {
-
-            })
             const camposInvalidos = campos.filter(elem => {
                 return elem.isInvalid;
             })

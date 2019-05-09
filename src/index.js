@@ -4,8 +4,12 @@ import './index.css';
 import Home from './Home';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+
+import Autores from './Autores';
+import Livros from './Livros';
 import Sobre from './Sobre';
 import NotFound from './NotFound'
+
 
 
 
@@ -14,6 +18,8 @@ ReactDOM.render(
     <Switch>
         <Route path="/" exact={true} component={Home} />
         <Route path="/sobre" component={Sobre} />
+        <Route path="/livros" component={Livros} />
+        <Route path="/autores" component={Autores} />
         <Route component={NotFound} />
     </Switch>
 </BrowserRouter>, document.getElementById('root'));

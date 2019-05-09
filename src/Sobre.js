@@ -6,12 +6,7 @@ import Footer from './Footer';
 
 class Sobre extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            titulo: "Sobre"
-        }
-    }
+
     render() {
         return (
             <Fragment>

@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import LinkWrapper from './LinkWrapper';
 
-class Footer extends Component {
-
-    render() {
-        return (
-            <footer className="page-footer indigo lighten-2 mb-0">
+const Footer = () => {
+    return (
+        <footer className="page-footer indigo lighten-2 mb-0">
                 <div className="container">
                     <div className="row">
                         <div className="col l6 s12">
@@ -28,9 +26,7 @@ class Footer extends Component {
                     
                 </div>
             </footer>
-        );
-    }
-
+    );
 }
 
 export default Footer;
